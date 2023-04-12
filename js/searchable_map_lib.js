@@ -277,7 +277,7 @@ var SearchableMapLib = {
 
     SearchableMapLib.currentResultsLayer = L.geoJSON(SearchableMapLib.currentResults, {
         pointToLayer: function (feature, latlng) {
-          return L.marker(latlng, {icon: SearchableMapLib.getIcon(feature.properties["Type"])} );
+          return L.marker(latlng, {icon: SearchableMapLib.getIcon(feature.properties["Type of Building (see dropdown)"])} );
         },
         onEachFeature: onEachFeature
       }
@@ -348,9 +348,9 @@ var SearchableMapLib = {
 
   // -----custom functions-----
   getIcon: function(type){
-    if (type == "Pharmacy") return redIcon;
-    if (type == "Government") return blueIcon;
-    if (type == "Other") return yellowIcon;
+    if (type == "Business") return redIcon;
+    if (type == "Residential") return blueIcon;
+    if (type == "Event Venue") return yellowIcon;
     return greenIcon;
   },
   // -----end custom functions-----

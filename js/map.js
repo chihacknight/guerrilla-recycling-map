@@ -8,10 +8,10 @@ $(window).resize(function () {
 $(function() {
 
   SearchableMapLib.initialize({
-    filePath: 'data/chicago-flu-shot-locations-2019.csv',
+    filePath: 'data/recycling-data.csv',
     fileType: 'csv',
-    recordName: 'flu shot location',
-    recordNamePlural: 'flu shot locations',
+    recordName: 'property',
+    recordNamePlural: 'properties',
     map_centroid: [41.85754, -87.66231],
     defaultZoom:  11,
     defaultRadius: 1610,
@@ -70,5 +70,5 @@ $(function() {
 });
 
 function formatAddress(prop) {
-    return prop["Street1"] + " " + prop["Street2"] + " " + prop["City"] + " " + prop["State"];
+    return prop["Address"] + " " + prop["City"] + " " + prop["State"];
 }
